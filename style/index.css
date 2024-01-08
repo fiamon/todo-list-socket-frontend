@@ -1,0 +1,156 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #808080;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  height: 100vh;
+}
+
+.left {
+  background-color: #5AC7AA;
+}
+.left .clock {
+  font-family: "Telex", sans-serif;
+  max-width: 200px;
+  margin: 20px;
+}
+.left .clock .clock-image {
+  width: 80px;
+}
+.left .clock .clock-text {
+  font-size: 24px;
+  color: white;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  height: 100vh;
+}
+.login h1 {
+  color: black;
+}
+.login form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  width: 100%;
+}
+.login form .login-form-email {
+  margin-bottom: 20px;
+}
+.login form .login-form-email, .login form .login-form-password {
+  border: none;
+  border-bottom: 1px solid #808080;
+  font-size: 20px;
+  font-weight: 500;
+  width: 100%;
+  padding: 5px;
+}
+.login form .login-form-submit {
+  display: block;
+  justify-content: center;
+  margin-top: 40px;
+  padding: 10px 200px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-size: 24px;
+  font-weight: 700;
+  background: #5AC7AA;
+  color: white;
+  cursor: pointer;
+}
+
+.create-account {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
+  font-weight: 500;
+  font-size: 20px;
+  gap: 3px;
+}
+
+.warnings {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.success {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  background: #D6FC92;
+  height: 40px;
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+.success span {
+  color: #449C0A;
+}
+.success .message, .success .redirecting {
+  font-weight: 600;
+  color: #163F01;
+}
+.success .redirecting {
+  margin-left: 100px;
+  border: 1px solid #6ACE13;
+  padding: 4px 12px;
+  border-radius: 8px;
+}
+.success .close {
+  cursor: pointer;
+}
+
+.error {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  background: #FDEFB0;
+  height: 40px;
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+.error .errors {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.error span {
+  color: #CE7100;
+}
+.error p, .error .failed-to-login, .error .close {
+  color: #602400;
+}
+.error .failed-to-login, .error .close {
+  font-weight: 600;
+}
+.error .close {
+  margin-left: 10px;
+  border: 1px solid #F1AA09;
+  padding: 4px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.none {
+  display: none;
+}
+
+/*# sourceMappingURL=index.css.map */

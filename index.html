@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <link rel="stylesheet" href="./style/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Telex&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+  <div class="left">
+    <div class="clock">
+      <img class="clock-image" src="./assets/clock.jpg" alt="a clock">
+      <p class="clock-text">Everything you need to do in one place.</p>
+    </div>
+  </div>
+  <div class="right">
+    <div class="login">
+      <h1>Login</h1>
+      <form id="login-form" class="login-form">
+        <input class="login-form-email" type="email" id="email" name="email" placeholder="Email Adrres">
+        <input class="login-form-password" type="password" id="password" name="password " placeholder="Password">
+        <input class="login-form-submit" type="submit" value="Login">
+      </form>
+      <div class="create-account">
+        <p>Do not have an account yet?</p>
+        <a href="./pages/create-account.html">Sign Up</a>
+      </div>
+      <div id="warnings" class="warnings">
+        <div class="success none" id="success">
+          <span class="material-symbols-outlined">task_alt</span>
+          <span class="message">Login successfully</span>
+          <span class="redirecting">redirecting...</span>
+          <span class="material-symbols-outlined close" id="close-success">close</span>
+        </div>
+        <div class="error none" id="error">
+          <span class="material-symbols-outlined">warning</span>
+          <div class="errors">
+            <span class="failed-to-login">Failed to login</span>
+            <p class="error-msg">An error occurred, check if the password and/or email are correct</p>
+          </div>
+          <span class="close" id="close-error">Close</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./scripts/index/warnings.js"></script>
+  <script src="./scripts/index/login.js"></script>
+</body>
+
+</html>

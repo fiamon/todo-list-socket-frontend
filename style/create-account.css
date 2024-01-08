@@ -1,0 +1,86 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #808080;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  height: 100vh;
+}
+
+.left {
+  background-color: #5AC7AA;
+}
+.left .clock {
+  font-family: "Telex", sans-serif;
+  max-width: 200px;
+  margin: 20px;
+}
+.left .clock .clock-image {
+  width: 80px;
+}
+.left .clock .clock-text {
+  font-size: 24px;
+  color: white;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  height: 100vh;
+}
+.login h1 {
+  color: black;
+}
+.login form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  width: 100%;
+}
+.login form .login-form-email {
+  margin-bottom: 20px;
+}
+.login form .login-form-email, .login form .login-form-password {
+  border: none;
+  border-bottom: 1px solid #808080;
+  font-size: 20px;
+  font-weight: 500;
+  width: 100%;
+  padding: 5px;
+}
+.login form .login-form-submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding: 10px 200px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-size: 24px;
+  font-weight: 700;
+  background: #5AC7AA;
+  color: white;
+  cursor: pointer;
+}
+
+.create-account {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
+  font-weight: 500;
+  font-size: 20px;
+  gap: 3px;
+}
+
+/*# sourceMappingURL=create-account.css.map */
