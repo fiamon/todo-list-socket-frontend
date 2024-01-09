@@ -24,18 +24,52 @@
   <div class="right">
     <div class="login">
       <h1>Create Account</h1>
-      <form class="login-form" action="http://localhost:8080/user" method="post">
-        <input class="login-form-email" type="text" id="fname" name="fname" placeholder="Full Name">
-        <input class="login-form-email" type="text" id="fname" name="fname" placeholder="Email Adrres">
-        <input class="login-form-password" type="text" id="lname" name="lname" placeholder="Password">
-        <input class="login-form-submit" type="submit" value="Create Account">
+      <form id="create-account-form" class="create-account-form">
+        <input class="login-form-full-name" type="text" id="full_name" name="full_name" placeholder="Full Name" minlength="3" maxlength="100" required>
+        <input class="login-form-email" type="email" id="email" name="email " placeholder="Email Addres" required>
+        <input class="login-form-password" type="password" id="password" name="password " placeholder="Password" required>
+        <input class="login-form-submit" type="submit" value="Login">
       </form>
       <div class="create-account">
         <p>Already have an account?</p>
-        <a href="../index.html">Log In</a>
+        <a href="../index.html">Sign In</a>
+      </div>
+      <div id="warnings" class="warnings">
+        <div class="success none" id="success">
+          <span class="material-symbols-outlined">task_alt</span>
+          <span class="message">Registration completed</span>
+          <span class="redirecting">redirecting...</span>
+          <span class="material-symbols-outlined close" id="close-success">close</span>
+        </div>
+        <div class="error-valid-email none error" id="error-valid-email">
+          <span class="material-symbols-outlined">warning</span>
+          <div class="errors">
+            <span class="failed-to-login">Failed to register</span>
+            <p class="error-msg">Enter a valid email</p>
+          </div>
+          <span class="close" id="close-error">Close</span>
+        </div>
+        <div class="error-password none error" id="error-password">
+          <span class="material-symbols-outlined">warning</span>
+          <div class="errors">
+            <span class="failed-to-login">Failed to register</span>
+            <p class="error-msg">Your password must have at least 8 characters, letters and numbers</p>
+          </div>
+          <span class="close" id="close-error">Close</span>
+        </div>
+        <div class="error-already-exists none error" id="error-already-exists">
+          <span class="material-symbols-outlined">warning</span>
+          <div class="errors">
+            <span class="failed-to-login">Failed to register</span>
+            <p class="error-msg">User already exists</p>
+          </div>
+          <span class="close" id="close-error">Close</span>
+        </div>
       </div>
     </div>
   </div>
+  <script src="../scripts/create-account/warnings.js"></script>
+  <script src="../scripts/create-account/create-account.js"></script>
 </body>
 
 </html>
