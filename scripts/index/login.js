@@ -23,6 +23,8 @@ form.addEventListener('submit', async e => {
       if(response.statusCode == 404 || response.statusCode === 400) {
         warnings.error()
       } else {
+        const token = response.access_token
+        localStorage.setItem("jwt_token", token)
         warnings.success()
       }
       
