@@ -22,7 +22,7 @@ class Warnings {
 
     setTimeout(() => {
       div.classList.add('none')
-      location.replace('http://localhost:8080/home.html')
+      location.replace('http://127.0.0.1:5500/pages/boards.html')
     }, 3000)
   }
 }
