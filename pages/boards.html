@@ -40,8 +40,26 @@
 
   <div class="left">
     <img src="../assets/background.png" alt="background">
-    <span class="create-new-list">Select a list or start a new one</span>
+    <span class="create-new-list" id="start-new-board">Select a list or start a new one</span>
+    <div class="create-new-board-form none" id="create-new-board-form">
+      <div class="header">
+        <h3>List</h3>
+        <span class="material-symbols-outlined" id="close">
+          close
+        </span>
+      </div>
+      <form>
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title">
+        <label for="description">Description</label>
+        <input type="text" id="description" name="description">
+        <div class="submit">
+          <input class="submit-btn" id="submit-btn" type="submit" value="✔️ Save">
+        </div>
+      </form>
+    </div>
   </div>
+  <script src="../scripts/boards/createBoard.js"></script>
 </body>
 
 </html>
