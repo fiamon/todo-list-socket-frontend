@@ -7,7 +7,7 @@
 
 body {
   display: grid;
-  grid-template-columns: 0.01fr 0.2fr 1.5fr;
+  grid-template-columns: 0.01fr 0.15fr 0.8fr;
 }
 
 .profile {
@@ -30,6 +30,7 @@ body {
 .lists {
   border-right: 1px solid #808080;
   display: flex;
+  flex-direction: column;
 }
 .lists .content {
   max-height: 60px;
@@ -39,16 +40,36 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.lists h1 {
+.lists .content h1 {
   margin: 20px;
 }
-.lists span {
+.lists .content span {
   cursor: pointer;
   color: white;
   margin: 20px;
   background: #5AC7AA;
   border-radius: 15px;
   padding: 10px;
+}
+.lists .list {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 30px;
+  gap: 3px;
+}
+.lists .list span {
+  color: #1D212D;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+.lists .list p {
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
 }
 
 .left {

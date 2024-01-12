@@ -6,13 +6,13 @@
 
 body
   display: grid
-  grid-template-columns: 0.01fr 0.2fr 1.5fr
+  grid-template-columns: 0.01fr 0.15fr 0.8fr
 
 .profile
   max-width: 70px
   border: none
-  border-right: 1px solid #808080
   height: 100vh
+  border-right: 1px solid #808080
   
   span
     cursor: pointer
@@ -27,6 +27,7 @@ body
 .lists
   border-right: 1px solid #808080
   display: flex
+  flex-direction: column
 
   .content
     max-height: 60px
@@ -35,17 +36,37 @@ body
     display: flex
     justify-content: space-between
     align-items: center
+    h1
+      margin: 20px
 
-  h1
-    margin: 20px
+    span
+      cursor: pointer
+      color: white
+      margin: 20px
+      background: #5AC7AA
+      border-radius: 15px
+      padding: 10px
 
-  span
+  .list
     cursor: pointer
-    color: white
-    margin: 20px
-    background: #5AC7AA
-    border-radius: 15px
-    padding: 10px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+    margin: 30px
+    gap: 3px
+
+    span
+      color: #1D212D
+      font-weight: 600
+      font-size: 16px
+      font-family: 'Inter', sans-serif
+
+    p
+      font-size: 14px
+      font-family: 'Inter', sans-serif
+      font-weight: 400
+
 
 
 .left
