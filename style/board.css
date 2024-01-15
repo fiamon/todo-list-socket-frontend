@@ -13,8 +13,8 @@ body {
 .profile {
   max-width: 70px;
   border: none;
-  border-right: 1px solid #808080;
   height: 100vh;
+  border-right: 1px solid #808080;
 }
 .profile span {
   cursor: pointer;
@@ -57,7 +57,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin: 30px;
+  padding: 30px;
   gap: 3px;
 }
 .lists .list span {
@@ -72,17 +72,17 @@ body {
   font-weight: 400;
 }
 
-.left {
+.new-board {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
 }
-.left img {
+.new-board img {
   width: 1000px;
 }
-.left .create-new-list {
+.new-board .create-new-list {
   margin-top: 10px;
   font-size: 36px;
   text-decoration: underline;
@@ -138,6 +138,125 @@ body {
   cursor: pointer;
   color: #E2E4E5;
   font-size: 48px;
+}
+
+.board {
+  margin: 30px;
+}
+.board .header {
+  display: flex;
+  justify-content: space-between;
+  align-content: flex;
+}
+.board .header h4 {
+  font-weight: 600;
+  font-size: 30px;
+  color: #000000;
+}
+.board .header .nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.board .header .nav button {
+  color: #fff;
+  background: #5AC7AA;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 12px 35px;
+}
+.board .header .nav span {
+  color: #000000;
+  font-size: 40px;
+  border: 1px solid black;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.to-to-board {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+}
+.to-to-board .footer {
+  background: #EDEDED;
+  border-top: 6px solid #000;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.to-to-board .header {
+  display: flex;
+  padding: 12px;
+  background: #EDEDED;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.to-to-board .header span {
+  color: #000;
+}
+
+.task {
+  margin: 15px;
+  border-radius: 7px;
+  border: 1px dashed black;
+  padding: 15px;
+  background: #fff4f4;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  max-height: 70px;
+}
+.task .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.task .left p {
+  color: #000;
+  font-size: 11px;
+  padding-left: 6px;
+  width: 100%;
+}
+.task .left span {
+  font-size: 14px;
+  color: #000000;
+}
+.task .left .article {
+  font-size: 20px;
+}
+.task .left .header-task {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.task .left .title-task {
+  font-weight: 600;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.right select {
+  background: none;
+  border-radius: 4px;
+  border-color: #808080;
+  padding: 3px;
+}
+.right .person {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.right .person span {
+  color: #000;
 }
 
 .none {
