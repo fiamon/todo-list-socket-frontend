@@ -23,6 +23,24 @@ submitBtn.addEventListener('click', () => {
   form.classList.add('none')
 })
 
+
+const newTaskBtn = document.getElementById("new-task")
+newTaskBtn.addEventListener('click', async () => {
+  const newTaskForm = document.getElementById('new-task-form')
+  newTaskForm.classList.remove('none')
+  
+  const submitNewTask = document.getElementById('submit-new-task-btn')
+  submitNewTask.addEventListener('click', () => {
+    newTaskForm.classList.add('none')
+  })
+
+  const closeNewTaskFormBtn = document.getElementById('close-new-task-form')
+  closeNewTaskFormBtn.addEventListener('click', () => {
+    newTaskForm.classList.add('none')
+  })
+})
+
+
 document.addEventListener('DOMContentLoaded', async () => {
   await fetchBoards()
 })
