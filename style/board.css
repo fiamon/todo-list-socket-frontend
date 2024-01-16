@@ -179,6 +179,7 @@ body {
 .to-to-board {
   display: flex;
   flex-direction: column;
+  margin-top: 40px;
   max-width: 350px;
 }
 .to-to-board .footer {
@@ -257,6 +258,65 @@ body {
 }
 .right .person span {
   color: #000;
+}
+
+.new-task {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 30px;
+  z-index: 1000;
+  border: 1px solid #E2E4E5;
+  border-radius: 8px;
+  margin-top: 20px;
+  right: 150px;
+}
+.new-task form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.new-task form select {
+  border: none;
+  border-bottom: 1px solid #007AFF;
+  padding: 7px;
+  background: none;
+}
+.new-task form input {
+  border: none;
+  border-bottom: 1px solid #E2E4E5;
+  padding: 6px;
+}
+.new-task form label {
+  font-size: 24px;
+  color: #242426;
+}
+.new-task form .submit-btn {
+  border-radius: 8px;
+  margin-top: 20px;
+  padding: 10px 25px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  background: #5AC7AA;
+}
+.new-task .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.new-task .header h3 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #242731;
+}
+.new-task .header span {
+  cursor: pointer;
+  color: #E2E4E5;
+  font-size: 48px;
 }
 
 .none {

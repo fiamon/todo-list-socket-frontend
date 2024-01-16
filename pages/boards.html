@@ -72,9 +72,37 @@
           <span class="material-symbols-outlined" id="delete">
             delete
           </span>
-          <button>+ Add To Do</button>
-          <button>+ Invite People</button>
+          <button id="new-task">+ Add To Do</button>
+          <button id="invite-user">+ Invite People</button>
         </div>
+      </div>
+
+      <div class="new-task none" id="new-task-form">
+        <div class="header">
+          <h3>To do</h3>
+          <span class="material-symbols-outlined" id="close-new-task-form">
+            close
+          </span>
+        </div>
+
+        <form id="form-new-task">
+          <label for="title-todo">Title</label>
+          <input type="text" id="title-todo" name="title-todo" required>
+          <label for="select-progress">Progress</label>
+          <select name="select-progress" id="select-progress" required>
+            <option value="to-do">To do</option>
+            <option value="doing">Doing</option>
+            <option value="done">Done</option>
+          </select>
+          <label for="member">Member</label>
+          <select name="member" id="member" required>
+          </select>
+          <label for="description-todo">Description</label>
+          <input type="text" id="description-todo" name="description-todo" required>
+          <div class="submit">
+            <input class="submit-btn" id="submit-new-task-btn" type="submit" value="✔️ Save">
+          </div>
+        </form>
       </div>
 
       <div class="to-to-board">
