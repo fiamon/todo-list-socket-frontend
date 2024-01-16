@@ -13,6 +13,7 @@
     rel="stylesheet">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
 </head>
 
 <body>
@@ -85,7 +86,7 @@
           </span>
         </div>
 
-        <form id="form-new-task">
+        <form id="form-new-task" class="none">
           <label for="title-todo">Title</label>
           <input type="text" id="title-todo" name="title-todo" required>
           <label for="select-progress">Progress</label>
@@ -105,45 +106,101 @@
         </form>
       </div>
 
-      <div class="to-to-board">
-        <div class="header">
-          <span>To do</span>
+      <div class="boards">
+        <div class="to-to-board">
+          <div class="header">
+            <span>To do</span>
+          </div>
+          <div class="tasks" id="todo-tasks">
+          </div>
+          <div class="footer">
+            ‎
+          </div>
         </div>
-        <div class="tasks">
-          <div class="task">
-            <div class="left">
-              <div class="header-task">
-                <span class="material-symbols-outlined article">
-                  article
-                </span>
-                <span class="title-task">Make the dinner</span>
+
+        <div class="doing-board">
+          <div class="header">
+            <span>Doing</span>
+          </div>
+          <div class="tasks">
+            <div class="task">
+              <div class="left">
+                <div class="header-task">
+                  <span class="material-symbols-outlined article">
+                    article
+                  </span>
+                  <span class="title-task">Make the dinner</span>
+                </div>
+                <div>
+                  <p>Lorem ipsum dolor blabla lets carpool toogethr tomorrow</p>
+                </div>
               </div>
-              <div>
-                <p>Lorem ipsum dolor blabla lets carpool toogethr tomorrow</p>
-              </div>
-            </div>
-            <div class="right">
-              <select name="status" id="status">
-                <option value="todo">🚀 To do</option>
-                <option value="doing">🚀 Doing</option>
-                <option value="done">🚀 Done</option>
-              </select>
-              <div class="person">
-                <span class="material-symbols-outlined">
-                  person
-                </span>
-                <span>Emma</span>
+              <div class="right">
+                <select name="status" id="status">
+                  <option value="todo">🚀 To do</option>
+                  <option value="doing">🚀 Doing</option>
+                  <option value="done">🚀 Done</option>
+                </select>
+                <div class="person">
+                  <span class="material-symbols-outlined">
+                    person
+                  </span>
+                  <span>Emma</span>
+                </div>
               </div>
             </div>
           </div>
+          <div class="footer">
+            ‎
+          </div>
         </div>
-        <div class="footer">
-          ‎
+
+        <div class="done-board">
+          <div class="header">
+            <span>Done</span>
+          </div>
+          <div class="tasks">
+            <div class="task">
+              <div class="left">
+                <div class="header-task">
+                  <span class="material-symbols-outlined article">
+                    article
+                  </span>
+                  <span class="title-task">Make the dinner</span>
+                </div>
+                <div>
+                  <p>Lorem ipsum dolor blabla lets carpool toogethr tomorrow</p>
+                </div>
+              </div>
+              <div class="right">
+                <select name="status" id="status">
+                  <option value="todo">🚀 To do</option>
+                  <option value="doing">🚀 Doing</option>
+                  <option value="done">🚀 Done</option>
+                </select>
+                <div class="person">
+                  <span class="material-symbols-outlined">
+                    person
+                  </span>
+                  <span>Emma</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer">
+            ‎
+          </div>
         </div>
       </div>
 
     </div>
+    <script src="../scripts/boards/renderTasks.js"></script>
+    <script src="../scripts/boards/fetchBoards.js"></script>
+    <script src="../scripts/boards/eventListeners.js"></script>
+    <script src="../scripts/boards/submitForm.js"></script>
     <script src="../scripts/boards/createBoard.js"></script>
+    <script src="../scripts/boards/deleteBoard.js"></script>
+    <script src="../scripts/boards/pusher.js"></script>
 </body>
 
 </html>

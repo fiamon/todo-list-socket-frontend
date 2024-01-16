@@ -169,7 +169,12 @@ body
         cursor: pointer
         padding: 5px
         border-radius: 50%
-        
+
+.boards
+  display: flex
+  justify-content: space-between
+  margin: 20px
+
 .to-to-board
   display: flex
   flex-direction: column
@@ -191,6 +196,34 @@ body
 
     span
         color: #000
+
+.done-board
+  display: flex
+  flex-direction: column
+  margin-top: 40px
+  max-width: 350px
+  width: 100%
+
+  .task
+    border: 1px dashed #5AC7AA
+
+  .footer
+    background: #EDEDED
+    border-top: 6px solid #5AC7AA
+    border-bottom-left-radius: 6px
+    border-bottom-right-radius: 6px
+    height: 8.3px
+
+  .header
+    display: flex
+    padding: 12px
+    background: #EDEDED
+    border-top-left-radius: 6px
+    border-top-right-radius: 6px
+
+    span
+      color: #000
+
 
 .task
   margin: 15px
@@ -252,8 +285,39 @@ body
     span
       color: #000
 
+
+
+.doing-board
+  display: flex
+  flex-direction: column
+  margin-top: 40px
+  max-width: 350px
+  width: 100%
+
+  .task
+    border: 1px dashed #EFEBA9
+
+  .footer
+    background: #EDEDED
+    border-top: 6px solid #EFEBA9
+    border-bottom-left-radius: 6px
+    border-bottom-right-radius: 6px
+    height: 13  .5px
+
+  .header
+    display: flex
+    padding: 12px
+    background: #EDEDED
+    border-top-left-radius: 6px
+    border-top-right-radius: 6px
+
+    span
+      color: #000
+
+
 .new-task
   position: absolute
+  background: white
   display: flex
   flex-direction: column
   width: 400px
