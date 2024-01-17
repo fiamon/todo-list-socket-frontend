@@ -176,6 +176,12 @@ body {
   border-radius: 50%;
 }
 
+.boards {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
 .to-to-board {
   display: flex;
   flex-direction: column;
@@ -196,6 +202,34 @@ body {
   border-top-right-radius: 6px;
 }
 .to-to-board .header span {
+  color: #000;
+}
+
+.done-board {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  max-width: 350px;
+  width: 100%;
+}
+.done-board .task {
+  border: 1px dashed #5AC7AA;
+}
+.done-board .footer {
+  background: #EDEDED;
+  border-top: 6px solid #5AC7AA;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  height: 8.3px;
+}
+.done-board .header {
+  display: flex;
+  padding: 12px;
+  background: #EDEDED;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.done-board .header span {
   color: #000;
 }
 
@@ -260,8 +294,37 @@ body {
   color: #000;
 }
 
+.doing-board {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  max-width: 350px;
+  width: 100%;
+}
+.doing-board .task {
+  border: 1px dashed #EFEBA9;
+}
+.doing-board .footer {
+  background: #EDEDED;
+  border-top: 6px solid #EFEBA9;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  height: 13 0.5px;
+}
+.doing-board .header {
+  display: flex;
+  padding: 12px;
+  background: #EDEDED;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.doing-board .header span {
+  color: #000;
+}
+
 .new-task {
   position: absolute;
+  background: white;
   display: flex;
   flex-direction: column;
   width: 400px;
