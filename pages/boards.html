@@ -86,7 +86,6 @@
             close
           </span>
         </div>
-
         <form id="form-new-task" class="none">
           <label for="title-todo">Title</label>
           <input type="text" id="title-todo" name="title-todo" required>
@@ -107,6 +106,24 @@
         </form>
       </div>
 
+      <div class="invite-peoplo-to-board none" id="invite-peoplo-to-board">
+        <div class="header">
+          <h3>Invite people</h3>
+          <span class="material-symbols-outlined" id="close-invite-people-to-board-form">
+            close
+          </span>
+        </div>
+        <form id="invite-peoplo-to-board-form" class="none">
+          <label for="invite-people-email">Email</label>
+          <input type="email" id="invite-people-email" name="invite-people-email" required>
+          <label for="invite-people-name">Name</label>
+          <input type="text" id="invite-people-name" name="invite-people-name" required>
+          <div class="submit">
+            <input class="submit-btn" id="invite-people-submit" type="submit" value="✔️ Save">
+          </div>
+        </form>
+      </div>
+
       <div class="boards">
         <div class="to-do-board">
           <div class="header">
@@ -123,7 +140,7 @@
           <div class="header">
             <span>Doing</span>
           </div>
-          <div class="tasks">
+          <div class="tasks" id="doing-tasks">
           </div>
           <div class="footer">
             ‎
@@ -134,7 +151,7 @@
           <div class="header">
             <span>Done</span>
           </div>
-          <div class="tasks">
+          <div class="tasks" id="done-tasks">
           </div>
           <div class="footer">
             ‎

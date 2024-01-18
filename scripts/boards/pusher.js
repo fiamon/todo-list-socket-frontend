@@ -18,7 +18,6 @@ class PusherHandler {
 
   updateTask() {
     this.channel.bind('updateTask', data => {
-      console.log(data)
       alert(JSON.stringify(data));
     });
   }
