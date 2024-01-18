@@ -108,7 +108,7 @@
       </div>
 
       <div class="boards">
-        <div class="to-to-board">
+        <div class="to-do-board">
           <div class="header">
             <span>To do</span>
           </div>
@@ -124,32 +124,6 @@
             <span>Doing</span>
           </div>
           <div class="tasks">
-            <div class="task">
-              <div class="left">
-                <div class="header-task">
-                  <span class="material-symbols-outlined article">
-                    article
-                  </span>
-                  <span class="title-task">Make the dinner</span>
-                </div>
-                <div>
-                  <p>Lorem ipsum dolor blabla lets carpool toogethr tomorrow</p>
-                </div>
-              </div>
-              <div class="right">
-                <select name="status" id="status">
-                  <option value="todo">🚀 To do</option>
-                  <option value="doing">🚀 Doing</option>
-                  <option value="done">🚀 Done</option>
-                </select>
-                <div class="person">
-                  <span class="material-symbols-outlined">
-                    person
-                  </span>
-                  <span>Emma</span>
-                </div>
-              </div>
-            </div>
           </div>
           <div class="footer">
             ‎
@@ -161,32 +135,6 @@
             <span>Done</span>
           </div>
           <div class="tasks">
-            <div class="task">
-              <div class="left">
-                <div class="header-task">
-                  <span class="material-symbols-outlined article">
-                    article
-                  </span>
-                  <span class="title-task">Make the dinner</span>
-                </div>
-                <div>
-                  <p>Lorem ipsum dolor blabla lets carpool toogethr tomorrow</p>
-                </div>
-              </div>
-              <div class="right">
-                <select name="status" id="status">
-                  <option value="todo">🚀 To do</option>
-                  <option value="doing">🚀 Doing</option>
-                  <option value="done">🚀 Done</option>
-                </select>
-                <div class="person">
-                  <span class="material-symbols-outlined">
-                    person
-                  </span>
-                  <span>Emma</span>
-                </div>
-              </div>
-            </div>
           </div>
           <div class="footer">
             ‎
@@ -195,12 +143,13 @@
       </div>
 
     </div>
+    <script src="../scripts/boards/createTaskHtml.js"></script>
+    <script src="../scripts/boards/deleteBoard.js"></script>
     <script src="../scripts/boards/renderTasks.js"></script>
     <script src="../scripts/boards/fetchBoards.js"></script>
     <script src="../scripts/boards/eventListeners.js"></script>
     <script src="../scripts/boards/submitForm.js"></script>
     <script src="../scripts/boards/createBoard.js"></script>
-    <script src="../scripts/boards/deleteBoard.js"></script>
 </body>
 
 </html>
