@@ -182,26 +182,27 @@ body {
   margin: 20px;
 }
 
-.to-to-board {
+.to-do-board {
   display: flex;
   flex-direction: column;
   margin-top: 40px;
   max-width: 350px;
+  width: 100%;
 }
-.to-to-board .footer {
+.to-do-board .footer {
   background: #EDEDED;
   border-top: 6px solid #000;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
 }
-.to-to-board .header {
+.to-do-board .header {
   display: flex;
   padding: 12px;
   background: #EDEDED;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
 }
-.to-to-board .header span {
+.to-do-board .header span {
   color: #000;
 }
 
@@ -309,7 +310,7 @@ body {
   border-top: 6px solid #EFEBA9;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
-  height: 13 0.5px;
+  height: 13.5px;
 }
 .doing-board .header {
   display: flex;

@@ -4,7 +4,9 @@ async function submitNewTaskForm(id) {
   const description = document.getElementById('description-todo').value
   const membersField = document.getElementById('member').value
 
-  fetch('http://localhost:8080/board/task', {
+  const pusher = new PusherHandler(id)
+
+  const response = await fetch('http://localhost:8080/board/task', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
@@ -19,4 +21,8 @@ async function submitNewTaskForm(id) {
       assigned_board_id: id
     })
   })
+
+  if(response.ok) {
+    pusher.newTaskHandler()
+  }
 }
