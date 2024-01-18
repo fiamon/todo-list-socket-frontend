@@ -1,8 +1,11 @@
 function createTask(task, user) {
   const todoTasks = document.getElementById('todo-tasks')
+  const doingTasks = document.getElementById('doing-tasks')
+  const doneTasks = document.getElementById('done-tasks')
 
   const divTask = document.createElement('div')
   divTask.classList.add('task')
+  divTask.id = task.id
   const divLeft = document.createElement('div')
   divLeft.classList.add('left')
   const divHeader = document.createElement('div')
@@ -16,7 +19,14 @@ function createTask(task, user) {
   spanName.classList.add('title-task')
   spanName.innerText = task.title
 
-  todoTasks.appendChild(divTask)
+  if (task.status === 'to-do') {
+    todoTasks.appendChild(divTask)
+  } else if (task.status === 'doing') {
+    doingTasks.appendChild(divTask)
+  } else {
+    doneTasks.appendChild(divTask)
+  }
+
   divTask.appendChild(divLeft)
   divLeft.appendChild(divHeader)
   divHeader.appendChild(spanArticle)
@@ -31,27 +41,50 @@ function createTask(task, user) {
   const divRight = document.createElement('div')
   divRight.classList.add('right')
 
+
+
+  const options = [
+    {
+      value: 'to-do',
+      text: '🚀 To do'
+    },
+    {
+      value: 'doing',
+      text: '🚀 Doing'
+    },
+    {
+      value: 'done',
+      text: '🚀 Done'
+    }
+  ]
+  let findedText;
+  options.map(status => {
+    if(status.value === task.status) {
+      return findedText = status.text
+    }
+  })
+
   const select = document.createElement('select')
   select.name = 'status'
   select.id = 'status'
 
-  const optionTodo = document.createElement('option')
-  optionTodo.value = 'todo'
-  optionTodo.innerText = '🚀 To do'
+  const option = document.createElement('option')
+  option.value = task.status
+  option.innerText = findedText
+  select.options.add(option, 1)
+  const newOptions = options.filter(option => option.text !== findedText)
 
-  const optionDoing = document.createElement('option')
-  optionDoing.value = 'doing'
-  optionDoing.innerText = '🚀 Doing'
-
-  const optionDone = document.createElement('option')
-  optionDone.value = 'done'
-  optionDone.innerText = '🚀 Done'
+  let counter = 2
+  for (let i = 0; i < 2; i++) {
+    const option = document.createElement('option')
+    option.value = newOptions[i].value
+    option.innerText = newOptions[i].text
+    select.add(option, counter)
+    counter++
+  }
 
   divTask.appendChild(divRight)
   divRight.appendChild(select)
-  select.appendChild(optionTodo)
-  select.appendChild(optionDoing)
-  select.appendChild(optionDone)
 
   const divPerson = document.createElement('div')
   divPerson.classList.add('person')
@@ -61,7 +94,7 @@ function createTask(task, user) {
   spanIcon.innerText = 'person'
 
   const spanNamePerson = document.createElement('span')
-  if(!user) {
+  if (!user) {
     const FirstName = task.assigned_user_id.full_name.split(' ')
     spanNamePerson.innerText = FirstName[0]
   } else {
