@@ -34,8 +34,8 @@ async function renderTodos(id) {
     createTask(boardWithTasks.tasks[i])
   }
 
-  const deleteBoard = document.getElementById('delete')
-  deleteBoard.addEventListener('click', async () => {
+  const deleteBoardBtn = document.getElementById('delete')
+  deleteBoardBtn.addEventListener('click', async () => {
     await deleteBoard(id)
     div.remove()
     createNewBoard.classList.remove('none')
@@ -50,19 +50,10 @@ async function renderTodos(id) {
   const invitePeopleToBoardForm = document.getElementById('invite-peoplo-to-board')
   invitePeopleToBoardForm.addEventListener('submit', async (e) => {
     e.preventDefault()
-
-    const email = document.getElementById('invite-people-email').value
-  
-    await fetch(`http://localhost:8080/board/invite/${id}`, {
-      method: 'PUT',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${localStorage.getItem('jwt_token')}`
-      },
-      body: JSON.stringify({
-        email,
-      })
+    inviteUserToBoard(id)
+    const submitFromInvitePeopleBtn = document.getElementById('invite-people-submit')
+    submitFromInvitePeopleBtn.addEventListener('click', () => {
+      formDiv.classList.add('none')
     })
   })
 
