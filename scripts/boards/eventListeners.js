@@ -40,15 +40,14 @@ newTaskBtn.addEventListener('click', async () => {
   })
 })
 
+const formDiv = document.getElementById('invite-peoplo-to-board')
 const closeInviteToBoardForm = document.getElementById('close-invite-people-to-board-form')
 closeInviteToBoardForm.addEventListener('click', () => {
-  const formDiv = document.getElementById('invite-peoplo-to-board')
   formDiv.classList.add('none')
 })
 
 const invitePeopleToBoard = document.getElementById('invite-user')
 invitePeopleToBoard.addEventListener('click', async () => {
-  const formDiv = document.getElementById('invite-peoplo-to-board')
   formDiv.classList.remove('none')
 })
 
