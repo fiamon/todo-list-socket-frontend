@@ -31,3 +31,15 @@ async function fetchBoards() {
   }
   return data
 }
+
+function createBoardDiv(board) {
+  const listsDiv = document.getElementById('lists')
+  const element = document.createElement('div')
+  element.classList.add('list')
+  element.id = board.id
+  element.innerHTML = `<span>${board.title}</span><p>${board.description}</p>`
+  element.onclick = function () {
+    renderTodos(this.id)
+  }
+  listsDiv.appendChild(element)
+}

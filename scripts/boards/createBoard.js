@@ -28,4 +28,6 @@ form.addEventListener('submit', async (e) => {
   if (data.statusCode === 401) {
     return location.replace('http://127.0.0.1:5500/index.html')
   }
+  
+  createBoardDiv(data)
 })
