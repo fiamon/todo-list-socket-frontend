@@ -1,25 +1,26 @@
-class PusherHandler {
-  constructor(boardId) {
-    this.boardId = boardId
+let channel;
+Pusher.logToConsole = true;
+const pusher = new Pusher('5698ffb683bdd7893c6a', {
+  cluster: 'us2'
+});
 
-    Pusher.logToConsole = true;
-    this.pusher = new Pusher('5698ffb683bdd7893c6a', {
-      cluster: 'us2'
-    });
-
-    this.channel = this.pusher.subscribe(`updateTasks-${this.boardId}`);
-  }
-
-  newTaskHandler() {
-    this.channel.bind('newTask', data => {
-      createTask(data.task, data.user.assigned_user_id)
-    });
-  }
-
-  updateTask() {
-    this.channel.bind('updateTask', data => {
-      alert(JSON.stringify(data));
-    });
-  }
+function createChannel(boardId) {
+  channel = pusher.subscribe(`updateTasks-${boardId}`);
 }
+
+function newTaskHandler() {
+  channel.bind('newTask', data => {
+    console.log('oi')
+    createTask(data.task, data.user.assigned_user_id)
+  });
+}
+
+function updateTask() {
+  channel.bind('updateTask', data => {
+    const div = document.getElementById(data.task.id)
+    div.remove()
+    createTask(data.task)
+  });
+}
+
 

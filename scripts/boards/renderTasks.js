@@ -5,7 +5,8 @@ async function renderTodos(id) {
   createNewBoard.classList.add('none')
   div.style.backgroundColor = 'rgba(128, 128, 128, 0.30)'
   div.style.borderRight = '3px solid #5AC7AA'
-  new PusherHandler(id)
+
+  createChannel(id)
 
   const response = await fetch('http://localhost:8080/board/' + id, {
     method: 'GET',

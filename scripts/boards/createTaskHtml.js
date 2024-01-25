@@ -59,14 +59,30 @@ function createTask(task, user) {
   ]
   let findedText;
   options.map(status => {
-    if(status.value === task.status) {
+    if (status.value === task.status) {
       return findedText = status.text
     }
   })
 
   const select = document.createElement('select')
+
   select.name = 'status'
-  select.id = 'status'
+  select.id = task.id
+  select.onclick = async function () {
+    fetch(`http://localhost:8080/board/task/${task.id}`, {
+      method: 'PATCH',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem('jwt_token')}`
+      },
+      body: JSON.stringify({
+        status: select.value
+      })
+    }).then(() => {
+      updateTask()
+    }).catch(err => console.log(err))
+  }
 
   const option = document.createElement('option')
   option.value = task.status

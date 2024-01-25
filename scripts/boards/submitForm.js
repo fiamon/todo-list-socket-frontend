@@ -4,7 +4,7 @@ async function submitNewTaskForm(id) {
   const description = document.getElementById('description-todo').value
   const membersField = document.getElementById('member').value
 
-  const pusher = new PusherHandler(id)
+  createChannel(id)
 
   const response = await fetch('http://localhost:8080/board/task', {
     method: 'POST',
@@ -23,6 +23,6 @@ async function submitNewTaskForm(id) {
   })
 
   if(response.ok) {
-    pusher.newTaskHandler()
+    newTaskHandler()
   }
 }
