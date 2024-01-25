@@ -3,7 +3,7 @@ class PusherHandler {
     this.boardId = boardId
 
     Pusher.logToConsole = true;
-    this.pusher = new Pusher('81b9344e362ece28cc37', {
+    this.pusher = new Pusher('5698ffb683bdd7893c6a', {
       cluster: 'us2'
     });
 
