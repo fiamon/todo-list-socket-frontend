@@ -1,7 +1,7 @@
 async function inviteUserToBoard(boardId) {
   const email = document.getElementById('invite-people-email').value
   
-  await fetch(`http://localhost:8080/board/invite/${boardId}`, {
+  const respose = await fetch(`http://localhost:8080/board/invite/${boardId}`, {
     method: 'PUT',
     headers: {
       'Accept': 'application/json',
@@ -12,4 +12,5 @@ async function inviteUserToBoard(boardId) {
       email,
     })
   })
+  return respose
 }

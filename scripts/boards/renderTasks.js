@@ -50,7 +50,16 @@ async function renderTodos(id) {
   const invitePeopleToBoardForm = document.getElementById('invite-peoplo-to-board')
   invitePeopleToBoardForm.addEventListener('submit', async (e) => {
     e.preventDefault()
-    inviteUserToBoard(id)
+    const response = await inviteUserToBoard(id)
+    
+    if(!response.ok) {
+      const emailInput = document.getElementById('invite-people-email')
+      const nameInput = document.getElementById('invite-people-name')
+
+      emailInput.style.border = '1px dotted red'
+      nameInput.style.border = '1px dotted red'
+    }
+    
     const submitFromInvitePeopleBtn = document.getElementById('invite-people-submit')
     submitFromInvitePeopleBtn.addEventListener('click', () => {
       formDiv.classList.add('none')
