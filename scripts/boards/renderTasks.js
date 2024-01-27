@@ -6,7 +6,7 @@ async function renderTodos(id) {
   div.style.backgroundColor = 'rgba(128, 128, 128, 0.30)'
   div.style.borderRight = '3px solid #5AC7AA'
 
-  createChannel(id)
+  const pusher = new PusherHandler(id)
 
   const response = await fetch('http://localhost:8080/board/' + id, {
     method: 'GET',
@@ -32,7 +32,7 @@ async function renderTodos(id) {
 
   // create tasks
   for (let i = 0; i < boardWithTasks.tasks.length; i++) {
-    createTask(boardWithTasks.tasks[i])
+    createTask(boardWithTasks.tasks[i], boardWithTasks.tasks[i].full_name, pusher)
   }
 
   const deleteBoardBtn = document.getElementById('delete')
@@ -45,7 +45,7 @@ async function renderTodos(id) {
   const formNewTask = document.getElementById('form-new-task')
   formNewTask.addEventListener('submit', async e => {
     e.preventDefault()
-    submitNewTaskForm(id)
+    submitNewTaskForm(id, pusher)
   })
 
   const invitePeopleToBoardForm = document.getElementById('invite-peoplo-to-board')

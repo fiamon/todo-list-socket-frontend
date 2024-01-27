@@ -1,4 +1,5 @@
-function createTask(task, user) {
+
+function createTask(task, user, pusher) {
   const todoTasks = document.getElementById('todo-tasks')
   const doingTasks = document.getElementById('doing-tasks')
   const doneTasks = document.getElementById('done-tasks')
@@ -79,9 +80,9 @@ function createTask(task, user) {
       body: JSON.stringify({
         status: select.value
       })
-    }).then(() => {
-      updateTask()
     }).catch(err => console.log(err))
+    
+    pusher.updateTask()
   }
 
   const option = document.createElement('option')

@@ -1,12 +1,10 @@
-async function submitNewTaskForm(id) {
+async function submitNewTaskForm(id, pusher) {
   const title = document.getElementById('title-todo').value
   const status = document.getElementById('select-progress').value
   const description = document.getElementById('description-todo').value
   const membersField = document.getElementById('member').value
 
-  createChannel(id)
-
-  const response = await fetch('http://localhost:8080/board/task', {
+  await fetch('http://localhost:8080/board/task', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
@@ -21,8 +19,5 @@ async function submitNewTaskForm(id) {
       assigned_board_id: id
     })
   })
-
-  if(response.ok) {
-    newTaskHandler()
-  }
+  pusher.newTaskHandler()
 }
