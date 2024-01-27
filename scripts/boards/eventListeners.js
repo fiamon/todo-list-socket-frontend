@@ -1,6 +1,7 @@
 const logoutBtn = document.getElementById('logout')
 logoutBtn.addEventListener('click', () => {
   location.replace('http://127.0.0.1:5500/index.html')
+  localStorage.setItem('jwt_token', '')
 })
 
 const createNewBoard = document.getElementById('start-new-board')
