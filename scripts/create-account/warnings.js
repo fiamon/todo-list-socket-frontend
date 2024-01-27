@@ -13,7 +13,7 @@ class Warnings {
   errorEmail() {
     errorValidEmailDiv.classList.remove('none')
 
-    const closeBtn = document.getElementById('close-error')
+    const closeBtn = document.getElementById('close-error-valid-email')
     closeBtn.addEventListener('click', () => {
       errorValidEmailDiv.classList.add('none')
     })
@@ -22,7 +22,7 @@ class Warnings {
   errorUser() {
     errorAlreadyExistsDiv.classList.remove('none')
 
-    const closeBtn = document.getElementById('close-error')
+    const closeBtn = document.getElementById('close-error-already-exists')
     closeBtn.addEventListener('click', () => {
       errorAlreadyExistsDiv.classList.add('none')
     })
@@ -31,7 +31,7 @@ class Warnings {
   password() {
     errorPasswordDiv.classList.remove('none')
 
-    const closeBtn = document.getElementById('close-error')
+    const closeBtn = document.getElementById('close-error-password')
     closeBtn.addEventListener('click', () => {
       errorPasswordDiv.classList.add('none')
     })
